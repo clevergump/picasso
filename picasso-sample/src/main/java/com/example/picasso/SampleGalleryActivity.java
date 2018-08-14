@@ -11,7 +11,7 @@ import static android.content.Intent.ACTION_PICK;
 import static android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
 import static com.squareup.picasso.Callback.EmptyCallback;
 
-public class SampleGalleryActivity extends PicassoSampleActivity {
+public class SampleGalleryActivity extends ASampleBaseActivity {
   private static final int GALLERY_REQUEST = 9391;
   private static final String KEY_IMAGE = "com.example.picasso:image";
 

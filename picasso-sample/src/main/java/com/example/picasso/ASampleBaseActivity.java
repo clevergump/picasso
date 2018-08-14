@@ -15,7 +15,7 @@ import com.squareup.picasso.Picasso;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 
-abstract class PicassoSampleActivity extends FragmentActivity {
+abstract class ASampleBaseActivity extends FragmentActivity {
   private ToggleButton showHide;
   private FrameLayout sampleContent;
 
@@ -25,12 +25,12 @@ abstract class PicassoSampleActivity extends FragmentActivity {
     sampleContent = (FrameLayout) findViewById(R.id.sample_content);
 
     final ListView activityList = (ListView) findViewById(R.id.activity_list);
-    final PicassoSampleAdapter adapter = new PicassoSampleAdapter(this);
+    final SampleAdapter adapter = new SampleAdapter(this);
     activityList.setAdapter(adapter);
     activityList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
       @Override
       public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-        adapter.getItem(position).launch(PicassoSampleActivity.this);
+        adapter.getItem(position).launch(ASampleBaseActivity.this);
       }
     });
 

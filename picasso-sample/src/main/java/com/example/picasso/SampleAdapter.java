@@ -17,7 +17,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 import java.util.Random;
 
-final class PicassoSampleAdapter extends BaseAdapter {
+final class SampleAdapter extends BaseAdapter {
 
   private static final int NOTIFICATION_ID = 666;
 
@@ -57,23 +57,23 @@ final class PicassoSampleAdapter extends BaseAdapter {
       }
     };
 
-    private final Class<? extends Activity> activityClass;
     private final String name;
+    private final Class<? extends Activity> destActivityClass;
 
-    Sample(String name, Class<? extends Activity> activityClass) {
-      this.activityClass = activityClass;
+    Sample(String name, Class<? extends Activity> destActivityClass) {
       this.name = name;
+      this.destActivityClass = destActivityClass;
     }
 
-    public void launch(Activity activity) {
-      activity.startActivity(new Intent(activity, activityClass));
-      activity.finish();
+    public void launch(Activity from) {
+      from.startActivity(new Intent(from, destActivityClass));
+      from.finish();
     }
   }
 
   private final LayoutInflater inflater;
 
-  public PicassoSampleAdapter(Context context) {
+  public SampleAdapter(Context context) {
     inflater = LayoutInflater.from(context);
   }
 

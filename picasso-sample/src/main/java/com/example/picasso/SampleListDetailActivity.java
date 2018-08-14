@@ -12,7 +12,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
-public class SampleListDetailActivity extends PicassoSampleActivity {
+public class SampleListDetailActivity extends ASampleBaseActivity {
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 

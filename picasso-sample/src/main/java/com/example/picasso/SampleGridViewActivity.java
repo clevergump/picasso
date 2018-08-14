@@ -3,7 +3,7 @@ package com.example.picasso;
 import android.os.Bundle;
 import android.widget.GridView;
 
-public class SampleGridViewActivity extends PicassoSampleActivity {
+public class SampleGridViewActivity extends ASampleBaseActivity {
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.sample_gridview_activity);

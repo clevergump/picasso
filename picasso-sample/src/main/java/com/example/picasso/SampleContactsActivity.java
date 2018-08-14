@@ -27,7 +27,7 @@ import android.widget.ListView;
 
 import static android.provider.ContactsContract.Contacts;
 
-public class SampleContactsActivity extends PicassoSampleActivity
+public class SampleContactsActivity extends ASampleBaseActivity
     implements LoaderManager.LoaderCallbacks<Cursor> {
   private static final boolean IS_HONEYCOMB =
       Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB;

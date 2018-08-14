@@ -28,10 +28,14 @@ final class SampleGridViewAdapter extends BaseAdapter {
     urls.addAll(copy);
   }
 
+  /// Q: no ViewHolder, but the convertView which is an ImageView must be reused, so I guess
+  /// it's reused and finally recycled in Picasso.
   @Override public View getView(int position, View convertView, ViewGroup parent) {
     SquaredImageView view = (SquaredImageView) convertView;
     if (view == null) {
       view = new SquaredImageView(context);
+      /// Q: what's the difference between setting CENTER_CROP directly to the ImageView
+      /// here and in Picasso fluent API?
       view.setScaleType(CENTER_CROP);
     }
 
